@@ -33,6 +33,29 @@ class Product {
   getPrice() {
     return `$${formatCurrency(this.priceCents)}`;
   }
+
+  extraInfoHTML() {
+    return "";
+  }
+}
+
+class Clothing extends Product {
+  sizeChartLink;
+
+  // if no constructor is created in child class by default parent constructor runs
+  constructor(productDetails) {
+    //super call the constructor of the parent class.
+    super(productDetails);
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+  extraInfoHTML() {
+    //this overrides the parent method of same name- method overriding
+    // super.extraInfoHTML(); // calls the parent method if needed
+    return `
+      <a href="${this.sizeChartLink}" target="_blank">Size chart</a>
+    `;
+  }
 }
 
 export const products = [
@@ -68,7 +91,7 @@ export const products = [
     },
     priceCents: 799,
     keywords: ["tshirts", "apparel", "mens"],
-    type: "clothing",
+    type: "clothing", //Discriminator Property
     sizeChartLink: "images/clothing-size-chart.png",
   },
   {
@@ -507,5 +530,8 @@ export const products = [
     keywords: ["sweaters", "hoodies", "apparel", "mens"],
   },
 ].map((productDetails) => {
+  if (productDetails.type === "clothing") {
+    return new Clothing(productDetails);
+  }
   return new Product(productDetails);
 });
