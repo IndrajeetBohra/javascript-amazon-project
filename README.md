@@ -4,15 +4,11 @@ A fully functional Amazon-style ecommerce frontend built using **Vanilla JavaScr
 
 This project demonstrates core to advanced JavaScript concepts including DOM manipulation, modular architecture, asynchronous programming, object-oriented programming, localStorage persistence, and unit testing using Jasmine.
 
----
-
 ## Live Demo
 
 Can run this project locally by opening: amazon.html
 
 Or host it using GitHub Pages.
-
----
 
 ## Project Overview
 
@@ -21,8 +17,6 @@ This project is a simplified frontend implementation of an ecommerce platform in
 Unlike traditional ecommerce applications, this project does not use a database. Instead, it uses **localStorage as a persistent client-side storage solution**, simulating real-world application state management.
 
 This project focuses heavily on **JavaScript architecture, logic, and state management**, rather than backend infrastructure.
-
----
 
 ## Features
 
@@ -87,8 +81,6 @@ This project focuses heavily on **JavaScript architecture, logic, and state mana
 - Sends order data using POST requests
 - Uses modern async/await and fetch API
 
----
-
 ## Testing (Jasmine)
 
 This project includes unit tests using the Jasmine testing framework.
@@ -102,8 +94,6 @@ Tested components include:
 - DOM rendering behavior
 
 To run tests: tests/test.html
-
----
 
 ## Technologies Used
 
@@ -151,72 +141,17 @@ To run tests: tests/test.html
 
 - dayjs (date handling)
 
----
-
-## Project Structure
-
-javascript-amazon-project/
-│
-├── amazon.html
-├── checkout.html
-├── orders.html
-├── tracking.html
-│
-├── scripts/
-│ ├── amazon.js
-│ ├── checkout.js
-│ ├── orders.js
-│ ├── tracking.js
-│ │
-│ ├── checkout/
-│ │ ├── orderSummary.js
-│ │ └── paymentSummary.js
-│ │
-│ └── utils/
-│ └── money.js
-│
-├── data/
-│ ├── products.js
-│ ├── cart.js
-│ ├── orders.js
-│ ├── deliveryOptions.js
-│ ├── cart-oop.js
-│ ├── cart-class.js
-│ └── backend-practice.js
-│
-├── tests/
-│ ├── test.html
-│ ├── checkout/
-│ ├── data/
-│ ├── utils/
-│ └── lib/
-│
-├── styles/
-├── images/
-│
-└── README.md
-
----
-
 ## Data Storage Architecture
 
 This project does not use a traditional database.
 
 Instead, it uses localStorage to simulate persistent backend storage.
 
-Stored data includes:
-
-localStorage:
-├── cart
-└── orders
-
 This approach allows:
 
 - Persistent state
 - Stateless frontend architecture
 - No backend dependency
-
----
 
 ## Backend API Used
 
@@ -226,8 +161,6 @@ Used for:
 
 - Fetching product data
 - Creating orders
-
----
 
 ## Learning Outcomes
 
@@ -243,13 +176,9 @@ This project helped develop a strong understanding of:
 - Backend communication
 - Real-world application structure
 
----
-
 ## Course Reference
 
-This project was built as part of the:
-
-**JavaScript Full Course by SuperSimpleDev**
+This project was built as part of the: **JavaScript Tutorial Full Course by SuperSimpleDev**
 
 Course topics covered include:
 
@@ -263,29 +192,20 @@ Course topics covered include:
 - Testing with Jasmine
 - Backend communication
 
----
-
 ## Future Improvements
 
 Planned improvements include:
 
 - More comprehensive test coverage
 - UI improvements
-- Backend database integration
-- Authentication system
 - Single Page Application conversion
 - Deployment
-
----
 
 ## Author
 
 Indrajeet Bohra
 
-GitHub:
-https://github.com/IndrajeetBohra
-
----
+GitHub: https://github.com/IndrajeetBohra
 
 ## License
 
