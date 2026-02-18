@@ -1,6 +1,6 @@
 import { cart, addToCart } from "../data/cart.js";
-import { products, loadProducts } from "../data/products.js";
-import { formatCurrency } from "./utils/money.js";
+import { loadProductsFetch, products, loadProducts } from "../data/products.js";
+// import { formatCurrency } from "./utils/money.js";
 
 loadProducts(renderProductsGrid);
 
@@ -69,7 +69,7 @@ function renderProductsGrid() {
         </select>
       </div>
 
-      ${product.extraInfoHTML()} 
+      
 
       <div class="product-spacer"></div>
 
@@ -85,6 +85,8 @@ function renderProductsGrid() {
     </div>
   `;
   });
+  // was added above product-spacer but not in final site by ssd
+  // ${product.extraInfoHTML()}
 
   document.querySelector(".js-products-grid").innerHTML = productsHTML;
 
